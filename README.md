@@ -54,11 +54,11 @@ python main.py --config 'mnist/lenet5/99.9' --run 'test' --rank_algo 'gcs' --pru
     | config = '' | # Select Dataset, Model, and Pruning Rate |
     | pretrained = '' | # Path to load pretrained model |
     | run = 'test' | # Experimental Notes |
-    | rank_algo = 'gcs' | # Choose a pruning algorithm (choose one of: snip, grasp, synflow, gcs, gcs-group)|
-    | prune_mode = 'rank' | # Choose a pruning mode (choose one of: dense, rank, rank/random, rank/iterative)|
+    | rank_algo = 'gcs' | # Choose a pruning algorithm (snip, grasp, synflow, gcs, gcs-group)|
+    | prune_mode = 'rank' | # Choose a pruning mode (dense, rank, rank/random, rank/iterative)|
     | dp = '../Data' | # Modify the path of the dataset |
     | storage_mask = 0 | # Store the resulting mask |
-    |  | Parameters for debugging |
+    | --- | **Parameters for debugging** |
     | debug = 0 | # for debugging |
     | epoch | # Modify the number of training rounds |
     | batch_size | # Modify the batch size of training samples |
@@ -67,7 +67,7 @@ python main.py --config 'mnist/lenet5/99.9' --run 'test' --rank_algo 'gcs' --pru
     | optim_mode = 'SGD' | # Choose an optimizer (SGD or Adam) |
     | train_mode = 1 | Whether to use train mode when calculating weight sensitivity |
     | dynamic = 1 | # Whether to use dynamic iteration |
-    | num_iters_prune = 100 | # Number of rounds for iterative pruning |
+    | num_iters_prune | # Number of rounds for iterative pruning (default: 100) |
     | data_mode | # Data sampling mode (see pruning.py for details) |
     | grad_mode | # Calculate gradient mode (see pruning.py for details) |
     | score_mode | # Calculate sort score Mode (see pruning.py for details) |
